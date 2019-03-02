@@ -1,7 +1,5 @@
 <?php declare (strict_types = 1);
 
-namespace Limoncello\l10n\Contracts\Format;
-
 /**
  * Copyright 2015-2019 info@neomerx.com
  *
@@ -18,18 +16,13 @@ namespace Limoncello\l10n\Contracts\Format;
  * limitations under the License.
  */
 
+namespace Limoncello\Tests\l10n\Messages\Resources2;
+
 /**
- * @package Limoncello\l10n
+ * @package Limoncello\Tests\l10n
  */
-interface TranslatorInterface
+class OriginalMessages
 {
-    /**
-     * @param string $locale
-     * @param string $namespace
-     * @param string $message
-     * @param array  $args
-     *
-     * @return string
-     */
-    public function translateMessage(string $locale, string $namespace, string $message, array $args = []): string;
+    /** @var string Test message */
+    const MSG_1 = 'Hello world';
 }

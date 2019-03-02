@@ -1,7 +1,5 @@
 <?php declare (strict_types = 1);
 
-namespace Limoncello\l10n\Contracts\Format;
-
 /**
  * Copyright 2015-2019 info@neomerx.com
  *
@@ -18,18 +16,22 @@ namespace Limoncello\l10n\Contracts\Format;
  * limitations under the License.
  */
 
+namespace Limoncello\Tests\l10n\Messages\Resources2;
+
+use Limoncello\Contracts\L10n\MessageStorageInterface;
+
 /**
- * @package Limoncello\l10n
+ * @package Limoncello\Tests\l10n
  */
-interface TranslatorInterface
+class DeMessages implements MessageStorageInterface
 {
     /**
-     * @param string $locale
-     * @param string $namespace
-     * @param string $message
-     * @param array  $args
-     *
-     * @return string
+     * @inheritdoc
      */
-    public function translateMessage(string $locale, string $namespace, string $message, array $args = []): string;
+    public static function getMessages(): array
+    {
+        return [
+            OriginalMessages::MSG_1 => 'Hallo Welt',
+        ];
+    }
 }
